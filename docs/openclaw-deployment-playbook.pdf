@@ -1,0 +1,504 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R ] /Count 5 >>
+endobj
+3 0 obj
+<< /Length 2457 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 45 750 Tm
+(# OpenClaw Deployment Playbook \(Client-Facing\)) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(## 1\) Local Deployment \(Fastest Start\)) Tj
+0 -14 Td
+(Best for solo founders/operators who want to launch quickly at low cost.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Step-by-step) Tj
+0 -14 Td
+(1. **Prep machine**) Tj
+0 -14 Td
+(   - Use a stable Windows or Linux machine that stays online during your work hours.) Tj
+0 -14 Td
+(   - Ensure at least 8 GB RAM and 20+ GB free disk.) Tj
+0 -14 Td
+(2. **Install prerequisites**) Tj
+0 -14 Td
+(   - Install Git, Node.js \(LTS\), and Docker \(if required by your workflows\).) Tj
+0 -14 Td
+(   - Verify terminal access and admin rights.) Tj
+0 -14 Td
+(3. **Install OpenClaw**) Tj
+0 -14 Td
+(   - Install OpenClaw using official docs flow.) Tj
+0 -14 Td
+(   - Run health/status checks after install.) Tj
+0 -14 Td
+(4. **Set up workspace**) Tj
+0 -14 Td
+(   - Create project folder structure \(memory, scripts, docs, backups\).) Tj
+0 -14 Td
+(   - Add baseline memory and SOP files.) Tj
+0 -14 Td
+(5. **Connect channels**) Tj
+0 -14 Td
+(   - Connect Telegram/WhatsApp/Discord based on client needs.) Tj
+0 -14 Td
+(   - Validate inbound and outbound messages.) Tj
+0 -14 Td
+(6. **Configure safety**) Tj
+0 -14 Td
+(   - Add approval gates for risky actions.) Tj
+0 -14 Td
+(   - Restrict credentials to least privilege.) Tj
+0 -14 Td
+(7. **Deploy first automation**) Tj
+0 -14 Td
+(   - Implement one high-ROI workflow first.) Tj
+0 -14 Td
+(   - Test with real sample tasks.) Tj
+0 -14 Td
+(8. **Handoff and backup**) Tj
+0 -14 Td
+(   - Provide runbook + quick video walkthrough.) Tj
+0 -14 Td
+(   - Export/backup workspace and memory files.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Required commands \(Windows + Ubuntu/WSL\)) Tj
+0 -14 Td
+(```powershell) Tj
+0 -14 Td
+(wsl --install -d Ubuntu) Tj
+0 -14 Td
+(wsl -d Ubuntu) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(sudo apt update && sudo apt upgrade -y) Tj
+0 -14 Td
+(sudo apt install -y git curl build-essential) Tj
+0 -14 Td
+(curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -) Tj
+0 -14 Td
+(sudo apt install -y nodejs) Tj
+0 -14 Td
+(node -v && npm -v && git --version) Tj
+0 -14 Td
+(openclaw status) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Success checklist) Tj
+0 -14 Td
+(- OpenClaw responds reliably) Tj
+0 -14 Td
+(- 1 live workflow in production) Tj
+0 -14 Td
+(- Backup and rollback instructions documented) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(---) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 2346 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 45 750 Tm
+() Tj
+0 -14 Td
+(## 2\) Cloud VPS Deployment \(24/7 Reliability\)) Tj
+0 -14 Td
+(Best for clients who need always-on uptime.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Step-by-step) Tj
+0 -14 Td
+(1. **Provision VPS**) Tj
+0 -14 Td
+(   - Choose provider \(Hetzner, DigitalOcean, Linode, AWS Lightsail\).) Tj
+0 -14 Td
+(   - Start with Ubuntu 22.04 LTS \(2 vCPU / 4 GB RAM minimum\).) Tj
+0 -14 Td
+(2. **Harden server**) Tj
+0 -14 Td
+(   - Create non-root sudo user.) Tj
+0 -14 Td
+(   - Disable password SSH; enable SSH keys only.) Tj
+0 -14 Td
+(   - Enable firewall \(UFW\) and fail2ban.) Tj
+0 -14 Td
+(   - Install security updates.) Tj
+0 -14 Td
+(3. **Install runtime stack**) Tj
+0 -14 Td
+(   - Install Git, Node.js LTS, Docker, and OpenClaw dependencies.) Tj
+0 -14 Td
+(   - Confirm versions and system health.) Tj
+0 -14 Td
+(4. **Install OpenClaw**) Tj
+0 -14 Td
+(   - Install in dedicated service directory.) Tj
+0 -14 Td
+(   - Configure environment variables and secrets securely.) Tj
+0 -14 Td
+(5. **Run as service**) Tj
+0 -14 Td
+(   - Set OpenClaw as systemd service for auto-restart.) Tj
+0 -14 Td
+(   - Validate boot persistence.) Tj
+0 -14 Td
+(6. **Attach channels + tools**) Tj
+0 -14 Td
+(   - Connect required messaging channels.) Tj
+0 -14 Td
+(   - Test each integration end-to-end.) Tj
+0 -14 Td
+(7. **Set observability**) Tj
+0 -14 Td
+(   - Enable logs, uptime checks, and alerting.) Tj
+0 -14 Td
+(   - Track key workflow failures.) Tj
+0 -14 Td
+(8. **Backups and DR**) Tj
+0 -14 Td
+(   - Daily backup of workspace/memory/config.) Tj
+0 -14 Td
+(   - Document restore runbook.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Required commands \(Ubuntu VPS\)) Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(sudo apt update && sudo apt upgrade -y) Tj
+0 -14 Td
+(sudo adduser deploy) Tj
+0 -14 Td
+(sudo usermod -aG sudo deploy) Tj
+0 -14 Td
+(sudo apt install -y ufw fail2ban git curl build-essential) Tj
+0 -14 Td
+(sudo ufw allow OpenSSH) Tj
+0 -14 Td
+(sudo ufw enable) Tj
+0 -14 Td
+(sudo systemctl enable --now fail2ban) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -) Tj
+0 -14 Td
+(sudo apt install -y nodejs) Tj
+0 -14 Td
+(node -v && npm -v) Tj
+0 -14 Td
+(openclaw status) Tj
+0 -14 Td
+(openclaw gateway status) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Success checklist) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 2290 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 45 750 Tm
+(- 24/7 reachable service) Tj
+0 -14 Td
+(- Auto-restart after reboot) Tj
+0 -14 Td
+(- Monitoring + backups active) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(---) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(## 3\) Hybrid Deployment \(Security + Reliability\)) Tj
+0 -14 Td
+(Best for sensitive workflows that must keep some data local.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Step-by-step) Tj
+0 -14 Td
+(1. **Split responsibilities**) Tj
+0 -14 Td
+(   - Cloud VPS handles orchestration and general automations.) Tj
+0 -14 Td
+(   - Local host handles sensitive data/tools only.) Tj
+0 -14 Td
+(2. **Design trust boundaries**) Tj
+0 -14 Td
+(   - Define what can leave local environment and what cannot.) Tj
+0 -14 Td
+(   - Document data classification \(public/internal/restricted\).) Tj
+0 -14 Td
+(3. **Deploy cloud node**) Tj
+0 -14 Td
+(   - Follow VPS deployment steps above.) Tj
+0 -14 Td
+(4. **Deploy local node**) Tj
+0 -14 Td
+(   - Install OpenClaw runtime on local machine.) Tj
+0 -14 Td
+(   - Restrict local node to private-only workflows.) Tj
+0 -14 Td
+(5. **Secure communications**) Tj
+0 -14 Td
+(   - Use secure channels and scoped credentials.) Tj
+0 -14 Td
+(   - Rotate secrets and revoke unused tokens.) Tj
+0 -14 Td
+(6. **Workflow routing**) Tj
+0 -14 Td
+(   - Route sensitive tasks to local node.) Tj
+0 -14 Td
+(   - Route non-sensitive tasks to cloud node.) Tj
+0 -14 Td
+(7. **Validation tests**) Tj
+0 -14 Td
+(   - Confirm sensitive data never leaves local scope.) Tj
+0 -14 Td
+(   - Test failover behavior when one node is offline.) Tj
+0 -14 Td
+(8. **Operational handoff**) Tj
+0 -14 Td
+(   - Provide routing rules + escalation SOP.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Required commands \(both nodes\)) Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(openclaw status) Tj
+0 -14 Td
+(openclaw gateway status) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(# Cloud node maintenance) Tj
+0 -14 Td
+(sudo apt update && sudo apt upgrade -y) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(# Local node maintenance) Tj
+0 -14 Td
+(sudo apt update && sudo apt upgrade -y) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Success checklist) Tj
+0 -14 Td
+(- Sensitive tasks remain local) Tj
+0 -14 Td
+(- Cloud handles non-sensitive automation continuously) Tj
+0 -14 Td
+(- Clear routing and incident SOPs documented) Tj
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 2351 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 45 750 Tm
+(---) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(## 4\) Managed Team Deployment \(Done-for-You Ops\)) Tj
+0 -14 Td
+(Best for teams that need governance, multi-user control, and ongoing support.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Step-by-step) Tj
+0 -14 Td
+(1. **Discovery + architecture workshop**) Tj
+0 -14 Td
+(   - Identify teams, use cases, risk profile, and success KPIs.) Tj
+0 -14 Td
+(2. **Environment design**) Tj
+0 -14 Td
+(   - Separate dev/staging/prod where needed.) Tj
+0 -14 Td
+(   - Define access model by role.) Tj
+0 -14 Td
+(3. **Identity and permissions**) Tj
+0 -14 Td
+(   - Configure role-based access and approval flows.) Tj
+0 -14 Td
+(   - Apply least-privilege policies.) Tj
+0 -14 Td
+(4. **Production deployment**) Tj
+0 -14 Td
+(   - Deploy OpenClaw in managed infrastructure.) Tj
+0 -14 Td
+(   - Configure channels, workflows, and escalation paths.) Tj
+0 -14 Td
+(5. **Compliance controls**) Tj
+0 -14 Td
+(   - Logging, retention, and auditability settings.) Tj
+0 -14 Td
+(   - Incident response and change control process.) Tj
+0 -14 Td
+(6. **Enable monitoring and reporting**) Tj
+0 -14 Td
+(   - Weekly usage, reliability, and issue reports.) Tj
+0 -14 Td
+(   - SLA and response-time targets.) Tj
+0 -14 Td
+(7. **Training + adoption**) Tj
+0 -14 Td
+(   - Team onboarding sessions.) Tj
+0 -14 Td
+(   - SOP documentation for admins and operators.) Tj
+0 -14 Td
+(8. **Continuous optimization**) Tj
+0 -14 Td
+(   - Monthly review of workflows and ROI.) Tj
+0 -14 Td
+(   - Expand automation scope safely.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Required commands \(ops baseline\)) Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(openclaw status) Tj
+0 -14 Td
+(openclaw gateway status) Tj
+0 -14 Td
+(openclaw gateway restart) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(```bash) Tj
+0 -14 Td
+(# Workspace backup example) Tj
+0 -14 Td
+(tar -czf backup-$\(date +%F\).tar.gz /home/<user>/.openclaw/workspace) Tj
+0 -14 Td
+(```) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(### Success checklist) Tj
+0 -14 Td
+(- Governance model active) Tj
+0 -14 Td
+(- Team trained and operating independently) Tj
+0 -14 Td
+(- Ongoing optimization cadence established) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(---) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(## Recommended default for most clients) Tj
+0 -14 Td
+(- **Start with Cloud VPS** for reliability.) Tj
+0 -14 Td
+(- Use **Hybrid** if sensitive workflows are involved.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 112 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 45 750 Tm
+(- Upgrade to **Managed Team** once multiple users/departments are active.) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 8 0 R >> >> /Contents 3 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 8 0 R >> >> /Contents 4 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 8 0 R >> >> /Contents 5 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 8 0 R >> >> /Contents 6 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 8 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000145 00000 n 
+0000002654 00000 n 
+0000005052 00000 n 
+0000007394 00000 n 
+0000009797 00000 n 
+0000009960 00000 n 
+0000010030 00000 n 
+0000010156 00000 n 
+0000010283 00000 n 
+0000010410 00000 n 
+0000010537 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+10664
+%%EOF
